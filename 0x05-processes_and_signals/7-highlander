@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Infinite loop that handles SIGTERM gracefully
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "I am invincible!!!"; sleep 0.1' SIGTERM
 
 while true
 do
