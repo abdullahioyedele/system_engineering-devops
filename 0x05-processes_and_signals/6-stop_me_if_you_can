@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-# Find the PID of the process
-pid=$(pgrep -f 4-to_infinity_and_beyond)
-
-# If found, send SIGTERM using /proc (not using kill or killall)
-if [ -n "$pid" ]; then
-  echo "15" > "/proc/$pid/oom_score_adj" 2>/dev/null
-fi
+pkill -f 4-to_infinity_and_beyond >/dev/null 2>&1
+echo 2
