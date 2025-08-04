@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# ghdvjha bajbfjasfbv bjasvbfajsvf
 
 pid=$(pgrep -o -f 7-highlander)
 
