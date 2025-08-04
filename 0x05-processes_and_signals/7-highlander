@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# This script handles SIGTERM with a custom message and runs indefinitely
+# This script handles SIGTERM and keeps running indefinitely
 
-trap 'echo "I am invincible!!!"' TERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
     echo "To infinity and beyond"
-    sleep 2 &
-    wait $!
+    read -t 2
 done
