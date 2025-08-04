@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 7-highlander
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "I am invincible!!!" >&1' SIGTERM
 
 while true
 do
