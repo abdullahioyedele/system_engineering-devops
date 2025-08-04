@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# This script displays all running processes in a user-oriented hierarchy, including those without a TTY
+# Display the PID of the current process with the command line
 
-ps -axf
+echo "PID"
+ps -p $$ -o pid= | xargs -I {} echo "{} ; +x $0"
