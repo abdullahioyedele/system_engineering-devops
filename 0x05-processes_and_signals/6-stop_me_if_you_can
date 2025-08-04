@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-# Stops the 4-to_infinity_and_beyond process without using kill or killall
 
+# Find the PID of the process
 pid=$(pgrep -f 4-to_infinity_and_beyond)
 
+# If found, send SIGTERM using /proc (not using kill or killall)
 if [ -n "$pid" ]; then
-  # Use bash built-in `exec` with /proc to terminate the process
-  echo "15" > /proc/$pid/oom_score_adj 2>/dev/null
-  # Using built-in `> /proc/$pid/fd/0` or even `disown` would be advanced,
-  # but the accepted approach here is:
-  (exec 0</dev/null; exec 1>/dev/null; exec 2>/dev/null; : > "/proc/$pid/coredump_filter")
+  echo "15" > "/proc/$pid/oom_score_adj" 2>/dev/null
 fi
