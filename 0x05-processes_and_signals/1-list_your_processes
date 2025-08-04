@@ -2,4 +2,4 @@
 # Display the PID of the current process with the command line
 
 echo "PID"
-ps -p $$ -o pid= | xargs -I {} echo "{} ; +x $0"
+echo "$$"
