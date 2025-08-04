@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that displays a message when receiving SIGTERM
+# Script that prints a message when it receives SIGTERM
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
