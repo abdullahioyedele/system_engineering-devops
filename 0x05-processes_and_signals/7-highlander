@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Infinite loop that handles SIGTERM gracefully
+# 7-highlander
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
