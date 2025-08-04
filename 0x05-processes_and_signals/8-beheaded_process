@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-# ghdvjha bajbfjasfbv bjasvbfajsvf
-
-pid=$(pgrep -o -f 7-highlander)
-
-if [ -n "$pid" ]; then
-  kill -9 "$pid"
-fi
+# Kill the 7-highlander process using SIGKILL
+kill -9 "$(pgrep -f 7-highlander)"
